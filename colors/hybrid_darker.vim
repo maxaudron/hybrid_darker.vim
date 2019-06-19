@@ -311,7 +311,7 @@ exe "hi! PmenuSel"      .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 exe "hi! PmenuSbar"     .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 exe "hi! PmenuThumb"    .s:fg_foreground  .s:bg_selection   .s:fmt_revr
 exe "hi! Question"      .s:fg_green       .s:bg_none        .s:fmt_none
-exe "hi! Search"        .s:fg_background  .s:bg_yellow      .s:fmt_none
+exe "hi! Search"        .s:fg_background  .s:bg_green      .s:fmt_none
 exe "hi! SpecialKey"    .s:fg_selection   .s:bg_none        .s:fmt_none
 exe "hi! SpellCap"      .s:fg_blue        .s:bg_darkblue    .s:fmt_undr
 exe "hi! SpellLocal"    .s:fg_aqua        .s:bg_darkcyan    .s:fmt_undr
@@ -416,7 +416,20 @@ exe "hi! DiffChangeDelete" .s:fg_orange .s:bg_background
 "   diffSubname
 "   diffComment
 
-"}}}
+
+highlight link SignifyLineAdd             DiffAdd
+highlight link SignifyLineChange          DiffChange
+highlight link SignifyLineDelete          DiffDelete
+highlight link SignifyLineChangeDelete    DiffChangeDelete
+highlight link SignifyLineDeleteFirstLine SignifyLineDelete
+
+highlight link SignifySignAdd             DiffAdd
+highlight link SignifySignChange          DiffChange
+highlight link SignifySignDelete          DiffDelete
+highlight link SignifySignChangeDelete    SignifySignChange
+highlight link SignifySignDeleteFirstLine SignifySignDelete
+
+" }}}
 "
 ""}}}
 " Ale Error Highlighting:"{{{
